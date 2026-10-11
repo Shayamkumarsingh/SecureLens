@@ -1,0 +1,138 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import "tailwindcss";
+@import "preline/variants.css";
+/* @import "./node_modules/preline/variants.css"; */
+
+/* Loader.css */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Fira Code', monospace; /* Default mono font for hacker vibe */
+}
+
+/* Neo-Brutalism Utilities */
+.neo-border { border: 2px solid #00FF9C; }
+.neo-shadow { box-shadow: 4px 4px 0 0 #00FF9C; }
+.neo-shadow-hover:hover { 
+  box-shadow: 6px 6px 0 0 #00FF9C; 
+  transform: translate(-2px, -2px);
+}
+.neo-card {
+  background-color: #1A1A1A;
+  border: 2px solid #00FF9C;
+  box-shadow: 6px 6px 0 0 #00FF9C;
+  transition: all 0.2s ease-in-out;
+}
+.neo-btn {
+  background-color: #00FF9C;
+  color: #121212;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  border: 2px solid #00FF9C;
+  box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+.neo-btn:hover {
+  box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.4);
+  transform: translate(-2px, -2px);
+}
+.neo-btn-outline {
+  background-color: transparent;
+  color: #00FF9C;
+  border: 2px solid #00FF9C;
+  box-shadow: 4px 4px 0 0 #00FF9C;
+  transition: all 0.2s ease-in-out;
+}
+.neo-btn-outline:hover {
+  background-color: #00FF9C;
+  color: #121212;
+  box-shadow: 6px 6px 0 0 #00FF9C;
+  transform: translate(-2px, -2px);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+.loader-container {
+  position: relative;
+  inset: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.loader-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-text {
+  font-family: "Fira Code", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* roughly equivalent to 'top-10' in Tailwind */
+  background-color: none; /* red background */
+  color: white; /* text color red */
+  font-size: 2.4vw; /* text-2xl ~ 24px */
+  font-weight: 500;
+  animation: pulse 2s infinite;
+  text-align: center;
+}
+
+.loader-text-2{
+  font-size: 1.8vw;
+  font-weight: 150;
+}
+
+.fade-text {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-text.hidden {
+  opacity: 0;
+}
+
+
+
+/* Main container for loader */
+/*  */
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ✨ Fading overlay */
+.fade-overlay {
+  position: absolute;
+  inset: 0; /* top: 0; bottom: 0; left: 0; right: 0; shorthand */
+  z-index: 10; /* Higher than glitch and text */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 30%, /* Fully transparent center */
+    rgba(0, 0, 0, 0.7) 70%, /* Start darkening edges */
+    rgba(0, 0, 0, 1) 100% /* Fully black at the corners */
+  );
+  pointer-events: none; /* Allows clicks to pass through if needed */
+}
+
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

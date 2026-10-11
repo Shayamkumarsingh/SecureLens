@@ -1,0 +1,6 @@
+chatenv
+.env
+venv
+__pycache__
+
+.venv
