@@ -1,4 +1,4 @@
-# 🛡️ CyberShield: Security Testing Tool for Early-Stage Web Projects
+# 🛡️ CyberShield: Security Testing Tool for Early-Stage Web Project
 
 CyberShield is a cybersecurity platform designed to help developers and users assess the security of websites. By scanning for vulnerabilities outlined in the OWASP Top 10, CyberShield provides actionable insights and user-friendly recommendations to ensure early-stage web projects are protected against common cyber threats.
 
